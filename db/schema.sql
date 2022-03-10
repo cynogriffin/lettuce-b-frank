@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS lettuc_db;
+
+CREATE DATABASE lettuce_db;
