@@ -25,7 +25,8 @@ An app that allows customers to make reservations at the Lettuce B Frank Restaur
 
 ### Team Members
 
-* Cody Griffin
+- Cody Griffin
+
 - Abe Mozahem
 - Amy Rodriguez
 - Saba Mahd
