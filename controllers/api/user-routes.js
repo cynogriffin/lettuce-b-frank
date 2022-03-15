@@ -5,9 +5,9 @@ const { User } = require('../../models');
 router.post('/', async (req, res) => {
     try {
         const dbUserData = await User.create({
-            name: req.body.first_name,
+            name: req.body.name,
             email: req.body.email,
-            phone: req.body.email
+            phone: req.body.phone
         });
 
         // set up session
@@ -59,4 +59,4 @@ router.post('/logout', (req, res) => {
     }
 });
 
-module.exports - router;
+module.exports = router;

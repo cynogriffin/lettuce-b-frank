@@ -18,8 +18,8 @@ Reservation.init(
             allowNull: false
         },
         res_time: {
-            type: DataTypes.NUMBER,
-            allowNull: false
+            type: DataTypes.STRING,
+            allowNull: false,
         },
         user_id: {
             type: DataTypes.INTEGER,

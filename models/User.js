@@ -26,9 +26,10 @@ User.init(
             }
         },
         phone: {
-            type: DataTypes.NUMBER,
+            type: DataTypes.STRING,
             allowNull: false,
             validate: {
+                isNumeric: true,
                 len: [10]
             }
         }
