@@ -17,9 +17,17 @@ Reservation.init(
             type: DataTypes.STRING,
             allowNull: false
         },
+        party_number: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
         res_time: {
             type: DataTypes.NUMBER,
             allowNull: false
+        },
+        reserved: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
         },
         user_id: {
             type: DataTypes.INTEGER,
