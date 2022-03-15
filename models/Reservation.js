@@ -22,7 +22,7 @@ Reservation.init(
             allowNull: false
         },
         res_time: {
-            type: DataTypes.NUMBER,
+            type: DataTypes.STRING,
             allowNull: false
         },
         reserved: {
