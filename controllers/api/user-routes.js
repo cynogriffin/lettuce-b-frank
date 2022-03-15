@@ -5,9 +5,9 @@ const { User } = require('../../models');
 router.post('/', async (req, res) => {
     try {
         const dbUserData = await User.create({
-            first_name: req.body.first_name,
+            name: req.body.first_name,
             email: req.body.email,
-            password: req.body.password,
+            phone: req.body.email
         });
 
         // set up session
@@ -32,14 +32,7 @@ router.post('/login', async (req, res) => {
         });
 
         if (!dbUserData) {
-            res.status(400).json({ message: 'Incorrect email or password. Please try again!' });
-            return;
-        }
-
-        const validPassword = await dbUserData.checkPassword(req.body.password);
-
-        if (!validPassword) {
-            res.status(400).json({ message: 'Incorrect email or password. Please try again!' });
+            res.status(400).json({ message: 'Incorrect email. Please try again!' });
             return;
         }
 
@@ -56,35 +49,14 @@ router.post('/login', async (req, res) => {
 });
 
 // logout and destroy session
-router.post('logout', (req, res) => {
+router.post('/logout', (req, res) => {
     if (req.session.loggedIn) {
         req.session.destroy(() => {
             res.status(204).end();
         });
     } else {
-        res.status(4040).end();
+        res.status(404).end();
     }
 });
 
 module.exports - router;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-module.exports = router;
