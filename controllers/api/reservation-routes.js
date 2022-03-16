@@ -84,7 +84,7 @@ router.post('/', (req, res) => {
 //     })
 //         .then(dbReservationData => {
 //             if (!dbReservationData) {
-//                 res.status(404).json({ message: 'No reservation found under this id' });
+//                 res.status(404).json({ message: 'No reservation found under this name' });
 //                 return;
 //             }
 //             res.json(dbReservationData);
