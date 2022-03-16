@@ -21,6 +21,13 @@ Reservation.init(
             type: DataTypes.INTEGER,
             allowNull: false
         },
+        res_date: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                isDate: true
+            },
+        },
         res_time: {
             type: DataTypes.STRING,
             allowNull: false

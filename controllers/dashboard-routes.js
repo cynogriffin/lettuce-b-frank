@@ -11,6 +11,7 @@ router.get('/', (req, res) => {
             'id',
             'party_name',
             'party_number',
+            'res_date',
             'res_time'
         ]
     })

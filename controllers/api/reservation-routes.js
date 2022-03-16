@@ -8,6 +8,7 @@ router.get('/', (req, res) => {
             'id',
             'party_name',
             'party_number',
+            'res_date',
             'res_time',
             'reserved'
         ],
@@ -25,7 +26,7 @@ router.get('/', (req, res) => {
         });
 });
 
-// find one reservation
+// find reservation by party name
 router.get('/:party_name', (req, res) => {
     Reservation.findOne({
         where: {
@@ -35,6 +36,7 @@ router.get('/:party_name', (req, res) => {
             'id',
             'party_name',
             'party_number',
+            'res_date',
             'res_time',
             'reserved'
         ],
