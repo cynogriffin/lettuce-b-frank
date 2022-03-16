@@ -7,12 +7,15 @@ router.get('/', (req, res) => {
         attributes: [
             'id',
             'party_name',
-            'res_time'
+            'party_number',
+            'res_date',
+            'res_time',
+            'reserved'
         ],
         include: [
             {
                 model: User,
-                attributes: ['id', 'email', 'phone']
+                attributes: ['name', 'email', 'phone']
             }
         ],
     })
@@ -23,7 +26,7 @@ router.get('/', (req, res) => {
         });
 });
 
-// find one reservation
+// find reservation by party name
 router.get('/:party_name', (req, res) => {
     Reservation.findOne({
         where: {
@@ -32,12 +35,15 @@ router.get('/:party_name', (req, res) => {
         attributes: [
             'id',
             'party_name',
-            'res_time'
+            'party_number',
+            'res_date',
+            'res_time',
+            'reserved'
         ],
         include: [
             {
                 model: User,
-                attributes: ['id', 'email', 'phone']
+                attributes: ['name', 'email', 'phone']
             }
         ],
     })
@@ -58,8 +64,9 @@ router.get('/:party_name', (req, res) => {
 router.post('/', (req, res) => {
     Reservation.create({
         party_name: req.body.party_name,
+        party_number: req.body.party_number,
         res_time: req.body.res_time,
-        user_id: req.body.user_id
+        user_id: req.session.user_id
     })
         .then(dbReservationData => res.json(dbReservationData))
         .catch(err => {
@@ -68,46 +75,46 @@ router.post('/', (req, res) => {
         });
 });
 
-// Update Reservation
-router.put('/:party_name', (req, res) => {
-    Reservation.update(req.body, {
-        where: {
-            party_name: req.params.party_name
-        }
-    })
-        .then(dbReservationData => {
-            if (!dbReservationData) {
-                res.status(404).json({ message: 'No reservation found under this id' });
-                return;
-            }
-            res.json(dbReservationData);
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        })
-})
+// // Update Reservation
+// router.put('/:party_name', (req, res) => {
+//     Reservation.update(req.body, {
+//         where: {
+//             party_name: req.params.party_name
+//         }
+//     })
+//         .then(dbReservationData => {
+//             if (!dbReservationData) {
+//                 res.status(404).json({ message: 'No reservation found under this id' });
+//                 return;
+//             }
+//             res.json(dbReservationData);
+//         })
+//         .catch(err => {
+//             console.log(err);
+//             res.status(500).json(err);
+//         })
+// })
 
 
-// Cancel Reservation
-router.delete('/:party_name', (req, res) => {
-    Reservation.destroy({
-        where: {
-            party_name: req.params.party_name
-        }
-    })
-        .then(dbReservationData => {
-            if (!dbReservationData) {
-                res.status(404).json({ message: 'No reservation found with this id' });
-                return;
-            }
-            res.json(dbReservationData);
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
-});
+// // Cancel Reservation
+// router.delete('/:party_name', (req, res) => {
+//     Reservation.destroy({
+//         where: {
+//             party_name: req.params.party_name
+//         }
+//     })
+//         .then(dbReservationData => {
+//             if (!dbReservationData) {
+//                 res.status(404).json({ message: 'No reservation found with this id' });
+//                 return;
+//             }
+//             res.json(dbReservationData);
+//         })
+//         .catch(err => {
+//             console.log(err);
+//             res.status(500).json(err);
+//         });
+// });
 
 
 module.exports = router;
