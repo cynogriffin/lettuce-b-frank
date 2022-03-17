@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Reservation } = require('../../models');
 
 // GET /api/users
 router.get('/', (req, res) => {
@@ -26,7 +26,7 @@ router.get('/:id', (req, res) => {
     })
         .then(dbUserData => {
             if (!dbUserData) {
-                res.status(404).json({ message: 'No user found with this id'});
+                res.status(404).json({ message: 'No user found with this id' });
                 return;
             }
             res.json(dbUserData);
@@ -52,12 +52,8 @@ router.post('/', (req, res) => {
 
                 res.json(dbUserData);
             });
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
         });
-})
+});
 
 // POST /api/users/login
 router.post('/login', (req, res) => {
@@ -68,7 +64,7 @@ router.post('/login', (req, res) => {
     })
         .then(dbUserData => {
             if (!dbUserData) {
-                res.status(400).json({ message: 'No user with that email address!'});
+                res.status(400).json({ message: 'No user with that email address!' });
                 return;
             }
 
