@@ -32,10 +32,6 @@ Reservation.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-        reserved: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-        },
         user_id: {
             type: DataTypes.INTEGER,
             references: {

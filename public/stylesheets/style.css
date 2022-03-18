@@ -15,5 +15,8 @@
     background-size: cover;
 }
 
+select {
+    display: flex;
+}
 
 /* #ff0022, #edfdfb, #b9bab8, #f8e9f2, #04030f */

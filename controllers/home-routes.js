@@ -13,4 +13,7 @@ router.get('/login', (req, res) => {
     res.render('login');
 })
 
+router.get('/reservations', (req, res) => {
+    res.render('reservations');
+});
 module.exports = router;

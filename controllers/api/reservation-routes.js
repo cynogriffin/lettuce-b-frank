@@ -9,8 +9,7 @@ router.get('/', (req, res) => {
             'party_name',
             'party_number',
             'res_date',
-            'res_time',
-            'reserved'
+            'res_time'
         ],
         include: [
             {
@@ -37,8 +36,7 @@ router.get('/:party_name', (req, res) => {
             'party_name',
             'party_number',
             'res_date',
-            'res_time',
-            'reserved'
+            'res_time'
         ],
         include: [
             {
@@ -62,9 +60,11 @@ router.get('/:party_name', (req, res) => {
 
 // Create Reservation
 router.post('/', (req, res) => {
+    if (req.session.loggedIn){
     Reservation.create({
         party_name: req.body.party_name,
         party_number: req.body.party_number,
+        res_date: req.body.res_date,
         res_time: req.body.res_time,
         user_id: req.session.user_id
     })
@@ -73,6 +73,7 @@ router.post('/', (req, res) => {
             console.log(err);
             res.status(500).json(dbReservationData);
         });
+    }
 });
 
 // // Update Reservation

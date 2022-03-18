@@ -6,7 +6,6 @@ const reservationData = [
         party_number: 12,
         res_date: 'March 30, 2022',
         res_time: '6:00pm',
-        reserved: true,
         user_id: 1
     },
     {
@@ -14,15 +13,13 @@ const reservationData = [
         party_number: 2,
         res_date: 'March 30, 2022',
         res_time: '2:00pm',
-        reserved: true,
         user_id: 2
     },
     {
         party_name: 'Sara',
         party_number: 5,
         res_date: 'March 30, 2022',
-        res_time: '11:00am',
-        reserved: true,
+        res_time: '12:00pm',
         user_id: 3
     },
     {
@@ -30,7 +27,6 @@ const reservationData = [
         party_number: 6,
         res_date: 'March 30, 2022',
         res_time: '2:00pm',
-        reserved: true,
         user_id: 4
     },
     {
@@ -38,7 +34,6 @@ const reservationData = [
         party_number: 2,
         res_date: 'March 30, 2022',
         res_time: '6:00pm',
-        reserved: true,
         user_id: 5
     },
 ];
