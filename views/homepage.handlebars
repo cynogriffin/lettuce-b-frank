@@ -1,3 +1,9 @@
 <div>Welcome to the fine dining experience of Lettuce B. Frank!</div>
 
-<button id="reservation">Reservations</button>
+{{#if loggedIn}}
+<button id="to-reservations" class="">Reservations</button>
+{{else}}
+<button id="to-login">Reservations</button>
+{{/if}}
+
+<script src="/javascript/homepage.js"></script>
