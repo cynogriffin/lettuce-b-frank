@@ -8,13 +8,14 @@ async function loginFormHandler(event) {
         const response = await fetch('/api/users/login', {
             method: 'post',
             body: JSON.stringify({
+                name,
                 email
             }),
             headers: { 'Content-type': 'application/json' }
         });
 
         if (response.ok) {
-            document.location.replace('/')
+            document.location.replace('/dashboard')
         } else {
             alert(response.statusText);
         }
