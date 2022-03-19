@@ -26,7 +26,4 @@ async function createReservation(event) {
 
 };
 
-
-
-
 document.querySelector('.res-details').addEventListener('submit', createReservation);

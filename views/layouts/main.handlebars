@@ -30,8 +30,10 @@
         </div>
         <nav class="light-green accent-2">
           <a href="/login" class="green-text darken-4">login/signup</a>
+          {{#if loggedIn}}
           <a href="/logout" id="logout" class="green-text darken-4">logout</a>
           <a href="/dashboard" class="green-text darken-4">dashboard</a>
+          {{/if}}
         </nav>
       </header>
       <main class="brown darken-3">
