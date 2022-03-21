@@ -26,19 +26,19 @@ This application is fully depoloyed on Heroku, so there is no installation neede
 
 To use the app, you can click on either the login/signin navigation link or simply click the Reservations button.
 
-![reservations button]()
+![reservations button](https://github.com/cynogriffin/lettuce-b-frank/blob/develop/public/assets/README%20images/Reservations.PNG)
 
 Then you will enter your information (name, email, and phone number) to create an account.
 
-![user signup screen]()
+![user signup screen](https://github.com/cynogriffin/lettuce-b-frank/blob/develop/public/assets/README%20images/signup.PNG)
 
 Once you create an account for the first time, you will then be able to place your first reservation.
 
-![reservation details screen]()
+![reservation details screen](https://github.com/cynogriffin/lettuce-b-frank/blob/develop/public/assets/README%20images/res-details.PNG)
 
 After entering the full details for your reservation,  it will be placed in the system and you can view your reservation details from the user dashboard.
 
-![user dashboard with active reservations]()
+![user dashboard with active reservations](https://github.com/cynogriffin/lettuce-b-frank/blob/develop/public/assets/README%20images/dashboard.PNG)
 
 ## Technology Used
 ##### [Back to Table of Contents](#table-of-contents)
