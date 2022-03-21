@@ -8,15 +8,29 @@
     box-sizing: border-box;
 } */
 
-
-#hero img{
-    width: 100%;
-    height: 300px;
+.nav-wrapper {
+    background-image: url('../assets/Burger-Desktop.jpg');
     background-size: cover;
+    background-attachment: fixed;
+    background-position-y: 550px;
+    width: 100%;
+}
+
+#hero {
+    background-image: url('../assets/Burger-Desktop.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-y: 550px;
+    width: 100%;
+    height: 400px;
 }
 
 select {
     display: flex;
 }
-
-/* #ff0022, #edfdfb, #b9bab8, #f8e9f2, #04030f */
+form {
+    caret-color: white;
+}
+form label, form input {
+    color: white;
+}
