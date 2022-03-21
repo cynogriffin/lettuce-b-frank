@@ -27,5 +27,8 @@
     "mysql2": "^2.3.3",
     "sequelize": "^6.17.0",
     "validator": "^13.7.0"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
