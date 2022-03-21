@@ -8,7 +8,7 @@ This project demonstrates the construction of a full stack application from scra
 
 Through this project we solidified our backend skills, specifically route building and handling databases, whilst learning how to integrate that with front-end logic and design. The main challenges we faced were staffing challenges with our group and communication issues. As far as building the code goes, the main challenge was figuring out what to build when and then coordinating how to fit is all together into a cohesive product. 
 
-The live production version of this application can be accessed on Heroku [here](https://pure-headland-10773.herokuapp.com/). Please feel free to use and test the application and let me know of any improvements or suggestions.
+The live production version of this application can be accessed on Heroku [here](https://mysterious-sands-14513.herokuapp.com/). Please feel free to use and test the application and let me know of any improvements or suggestions.
 
 ## Table of Contents
 
@@ -30,15 +30,15 @@ To use the app, you can click on either the login/signin navigation link or simp
 
 Then you will enter your information (name, email, and phone number) to create an account.
 
-
+![user signup screen]()
 
 Once you create an account for the first time, you will then be able to place your first reservation.
 
-
+![reservation details screen]()
 
 After entering the full details for your reservation,  it will be placed in the system and you can view your reservation details from the user dashboard.
 
-
+![user dashboard with active reservations]()
 
 ## Technology Used
 ##### [Back to Table of Contents](#table-of-contents)
