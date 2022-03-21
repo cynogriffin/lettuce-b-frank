@@ -1,16 +1,15 @@
-<h2>Your Reservations:</h2>
-
+<h2 class="section">Your Reservations:</h2>
+<hr>
 <div>
   {{#each reservations as |reservation|}}
     <h3>Reservation Number: {{id}}</h3>
     <div>Time: {{res_time}}</div>
-    <div>Date: {{res_date}}</div>
+    <div>Date: {{format_date res_date}}</div>
     <div>Name for Party: {{party_name}}</div>
     <div>Number of Guests: {{party_number}}</div>
+    <hr>
   {{/each}}
 </div>
-
-<hr>
 <br>
 <a
   href="/reservations"
