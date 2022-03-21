@@ -1,15 +1,15 @@
 async function loginFormHandler(event) {
     event.preventDefault();
 
-    const name = document.querySelector('#name-login').value.trim();
+    const phone = document.querySelector('#phone-login').value.trim();
     const email = document.querySelector('#email-login').value.trim();
 
-    if (name && email) {
+    if ( email && phone ) {
         const response = await fetch('/api/users/login', {
             method: 'post',
             body: JSON.stringify({
-                name,
-                email
+                email,
+                phone
             }),
             headers: { 'Content-type': 'application/json' }
         });
@@ -20,7 +20,8 @@ async function loginFormHandler(event) {
             alert(response.statusText);
         }
     }
-}
+};
+
 async function signupFormHandler(event) {
     event.preventDefault();
 
