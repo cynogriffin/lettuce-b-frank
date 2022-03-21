@@ -1,36 +1,40 @@
-<section>
-    <h2>Select your reservation date and time:</h2>
+<form class="res-details container section">
 
-    <form class="new-reservation">
-        <input type="date" id="date">
+  <div>
+    <label for="party-name">Name for Party:</label>
+    <input type="text" name="party-name" id="party_name" />
+  </div>
 
-        <div class="times">
-            <label for="12">12:00</label>
-            <button type="button" id="12">Reserve</button>
+  <div>
+    <label for="party_number">Number of Guests:</label>
+    <input type="number" name="party_number" id="party_number" />
+  </div>
 
-            <label for="1">1:00</label>
-            <button type="button" id="1">Reserve</button>
+  <div>
+    <label for="date">Choose a date:</label>
+    <input type="date" id="date" />
+  </div>
 
-            <label for="2">2:00</label>
-            <button type="button" id="2">Reserve</button>
+  <div class="the-time">
+    <label for="time">Choose a time:</label>
 
-            <label for="3">3:00</label>
-            <button type="button" id="3">Reserve</button>
+    <select name="time" id="time">
+      <option value="12:00pm" class="white-text">12:00pm</option>
+      <option value="1:00pm">1:00pm</option>
+      <option value="2:00pm">2:00pm</option>
+      <option value="3:00pm">3:00pm</option>
+      <option value="4:00pm">4:00pm</option>
+      <option value="5:00pm">5:00pm</option>
+      <option value="6:00pm">6:00pm</option>
+      <option value="7:00pm">7:00pm</option>
+      <option value="8:00pm">8:00pm</option>
+      <option value="9:00pm">9:00pm</option>
+    </select>
+  </div>
 
-            <label for="4">4:00</label>
-            <button type="button" id="4">Reserve</button>
+  <div class="section">
+    <button type="submit" class="waves-effect waves-light btn">Submit Reservation</button>
+  </div>
 
-            <label for="5">5:00</label>
-            <button type="button" id="5">Reserve</button>
-
-            <label for="6">6:00</label>
-            <button type="button" id="6">Reserve</button>
-
-            <label for="7">7:00</label>
-            <button type="button" id="7">Reserve</button>
-
-            <label for="8">8:00</label>
-            <button type="button" id="8">Reserve</button>
-        </div>
-    </form>
-</section>
+</form>
+<script src="/javascript/reservations.js"></script>

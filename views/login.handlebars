@@ -1,7 +1,22 @@
-<form class="signup-form">
+<form class="login-form container white-text">
+    <div>
+        <label for="email-login">Email:</label>
+        <input type="text" id="email-login" />
+    </div>
+    <div>
+        <label for="phone-login">Phone Number:</label>
+        <input type="text" id="phone-login" />
+    </div>
+    <div>
+        <button type="submit" class="waves-effect waves-light btn">Submit</button>
+    </div>
+</form>
+
+<form class="signup-form container">
+    <h2>Sign Up (first-time users)</h2>
     <div>
         <label for="name-signup">Name:</label>
-        <input type="text" id="username-signup" />
+        <input type="text" id="name-signup" />
     </div>
     <div>
         <label for="email-signup">Email:</label>
@@ -12,6 +27,7 @@
         <input type="number" id="phone-signup" />
     </div>
     <div>
-        <button type="submit">Submit</button>
+        <button type="submit" class="waves-effect waves-light btn">Submit</button>
     </div>
 </form>
+<script src="/javascript/login.js"></script>

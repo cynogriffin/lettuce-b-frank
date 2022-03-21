@@ -1,28 +1,51 @@
-<!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lettuce B. Frank</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lettuce B. Frank</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
 
-<body>
-  <div class="wrapper">
-    <header>
-      <h1>
-        <a href="/">Lettuce B. Frank</a>
-      </h1>
-    </header>
-    <main>
-      {{{ body }}}
-    </main>
-    <footer>
-      Thanks for visiting!
-    </footer>
-  </div>
+  <body>
+    <div>
+      <header>
+        <nav class="nav-wrapper green">
+          <a href="/" class="brand-logo left">Lettuce B. Frank</a>
+          <ul id="nav-mobile" class="right">
+            {{#if loggedIn}}
+              <li><a href="/logout" id="logout" class="btn">logout</a></li>
+              <li><a href="/dashboard" class="btn">dashboard</a></li>
+            {{else}}
+              <li><a href="/login" class="btn">login/signup</a></li>
+            {{/if}}
+          </ul>
+        </nav>
+        <div id="hero">
+        </div>
+      </header>
+      <main class="center purple darken-4 white-text section">
+        {{{body}}}
+      </main>
+      <footer class="footer center section">
+        <h4 class="purple-text darken-3">Thanks for visiting!</h4>
+      </footer>
+    </div>
 
-</body>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+    ></script>
+    {{#if loggedIn}}
+      <script src="/javascript/logout.js"></script>
+    {{/if}}
+  </body>
 
 </html>

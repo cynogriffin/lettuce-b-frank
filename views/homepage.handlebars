@@ -1,3 +1,9 @@
-<div>Welcome to the fine dining experience of Lettuce B. Frank!</div>
+<div class="white-text darken-4">
+  <h3>Welcome to the fine dining experience of <br> Lettuce B. Frank!</h3>
+</div>
 
-<button id="reservation">Reservations</button>
+{{#if loggedIn}}
+<a href="/dashboard" class="waves-effect waves-light btn">Reservations</a>
+{{else}}
+<a href="/login" class="waves-effect waves-light btn">Reservations</a>
+{{/if}}
